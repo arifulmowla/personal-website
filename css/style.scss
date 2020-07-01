@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+$primary: #ec4c77;
+
+.container {
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.wrapper {
+}
+
+header {
+  background-image: url(/images/header-bg.png);
+  .head-flex {
+    padding: 60px 0;
+    display: flex;
+
+    .head-left {
+      padding: 120px 0;
+      h1 {
+        font-weight: bold;
+        color: $primary;
+        padding: 20px 0;
+        font-size: 36px;
+
+        span {
+          font-weight: normal;
+          color: rgba($color: #000000, $alpha: 0.9);
+        }
+      }
+
+      p {
+        color: rgba($color: #000000, $alpha: 0.8);
+      }
+
+      button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: $primary;
+        color: white;
+        margin: 15px 0;
+      }
+    }
+
+    .head-right {
+      width: 50%;
+      padding-left: 30px;
+
+      img {
+        width: 100%;
+        max-width: 500px;
+        float: right;
+      }
+    }
+  }
+}
+
+.biography {
+  background-image: url(/images/biography-bg.png);
+  background-repeat: no-repeat;
+  padding: 60px 0;
+  .bio-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bio-left {
+    padding-right: 60px;
+    img {
+      max-width: 500px;
+    }
+  }
+
+  .bio-right {
+    padding: 100px 0;
+    h2 {
+      font-weight: normal;
+      padding: 20px 0;
+      font-size: 32px;
+    }
+
+    p {
+      color: rgba($color: #000000, $alpha: 0.8);
+    }
+
+    .bio-btn {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: $primary;
+      color: white;
+      margin: 15px 0;
+      font-weight: 14px;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+  }
+}
+
+.latest-work {
+  background-image: url(/images/latest-work-bg.png);
+  padding: 60px 0;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    padding: 30px 0;
+    color: rgba($color: #000000, $alpha: 0.8);
+  }
+
+  .work-flex {
+    padding: 30px 0;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 450px);
+    grid-gap: 20px;
+  }
+
+  .work-box {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.testimonial {
+  text-align: center;
+
+  h2 {
+    font-weight: 32px;
+    margin: 30px 0;
+  }
+
+  .test-box {
+    span {
+      font-size: 13px;
+      color: rgba($color: #000000, $alpha: 0.6);
+    }
+
+    p {
+      padding: 30px 0;
+      width: 60%;
+      margin: 0 auto;
+      color: rgba($color: #000000, $alpha: 0.8);
+    }
+  }
+}
+
+.message {
+  h4 {
+    font-weight: normal;
+  }
+  color: rgba($color: #fff, $alpha: 0.9);
+  margin: 0 auto;
+  width: 60%;
+  padding: 30px 20px;
+  margin: 60px auto;
+  border-radius: 12px;
+  max-width: 600px;
+  background-image: linear-gradient(90deg, $primary, #f03994);
+
+  form {
+    margin: 0 auto;
+    table {
+      width: 100%;
+      padding: 30px 20px;
+      margin: 0 auto;
+    }
+    .input {
+      width: 100%;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 5px 0;
+      border: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #fff;
+      color: $primary;
+      margin-top: 15px;
+    }
+  }
+}
+
+footer {
+  background-image: url(/images/footer-bg.png);
+  text-align: center;
+  padding-bottom: 10px;
+
+  .footer-p {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .latest-work .work-flex {
+    grid-template-columns: 1fr;
+  }
+
+  .biography .bio-flex {
+    flex-direction: column;
+  }
+
+  .biography .bio-left {
+    padding-right: 0px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header .head-flex {
+    flex-direction: column-reverse !important;
+  }
+
+  header .head-flex .head-right {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .latest-work .work-flex {
+    grid-template-columns: repeat(1, 300px);
+  }
+}
