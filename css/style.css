@@ -268,4 +268,13 @@ footer .footer-p {
         grid-template-columns: repeat(1, 300px);
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .biography .bio-left img {
+    width: 100%;
+  }
+  .message {
+    width: 90%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
